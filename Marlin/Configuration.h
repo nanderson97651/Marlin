@@ -986,13 +986,14 @@
  *     |    [-]    |
  *     O-- FRONT --+
  */
-#define NOZZLE_TO_PROBE_OFFSET { -28, -4, -2 }
+#define NOZZLE_TO_PROBE_OFFSET {-28.1, -6.5, -2.8}
 // Stock hotend {-46, -9, -2}
 // V6 in minimalist mount {-28, -6, -2}
+// V6 minimalist mount alt {-28.1, -6.5, -2.8}
 
 // Most probes should stay away from the edges of the bed, but
 // with NOZZLE_AS_PROBE this can be negative for a wider probing area.
-#define PROBING_MARGIN 15
+#define PROBING_MARGIN 30
 
 // X and Y axis travel speed (mm/min) between probes
 #define XY_PROBE_SPEED (133*60)
@@ -1365,7 +1366,7 @@
  * Commands to execute at the end of G29 probing.
  * Useful to retract or move the Z probe out of the way.
  */
-//#define Z_PROBE_END_SCRIPT "G1 Z10 F12000\nG1 X15 Y330\nG1 Z0.5\nG1 Z10"
+//#define Z_PROBE_END_SCRIPT "G1 Z10 F1500\nG1 X15 Y15\nG1 Z0.5\nG1 Z10"
 
 // @section homing
 
